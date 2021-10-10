@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ismoke - {% block title %}одноразовые pod системы elf bar{% endblock %}</title>
+     <link rel="stylesheet" href="{% static 'shop/css/style.css' %}">
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <a href="#" class="header__logo"><img src="{% static 'shop/img/ismoke.png' %}" alt="ismoke"></a>
+                <div class="header__menu">
+                    <div class="menu__icon">
+                        <span></span>
+                    </div>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li><a data-goto=".product" href="#" class="menu__link">Товары</a></li>
+                            <li><a data-goto=".about" href="#" class="menu__link">О Elf bar</a></li>
+                            <li><a data-goto=".shipping-payment" href="#" class="menu__link">Доставка и оплата</a></li>
+                            <li><a data-goto=".contact" href="#" class="menu__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        {% block content %}{% endblock %}
+    </div>
+    <script src="{% static 'shop/js/script.js' %}"></script>
+</body>
+</html>

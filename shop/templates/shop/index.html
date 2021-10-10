@@ -1,0 +1,134 @@
+{% extends 'shop/base.html' %}
+{% load static %}
+
+{% block title %}одноразовые pod системы elf bar{% endblock %}
+
+{% block content %}
+<div class="page">
+            <div class="main-title">
+                <h1>Elf bar</h1>
+                <h2>Безупречный вкус <br>до последней затяжки</h2>
+                <a data-goto=".product" href="#" class="button-buy button-buy_main">Купить</a>
+            </div>
+            <section class="benefits">
+                <div class="benefits__item">
+                    <img src="{% static 'shop/img/feature1.png' %}" alt="Экономный" class="benefits__icon">
+                    <div class="benefits__detail">
+                        <h3>Экономный</h3>
+                        <p>1 Elf bar 800 равен 60 сигаретам</p>
+                    </div>
+                </div>
+                <div class="benefits__item">
+                    <img src="{% static 'shop/img/feature2.png' %}" alt="Компактный" class="benefits__icon">
+                    <div class="benefits__detail">
+                        <h3>Компактный</h3>
+                        <p>Elf bar 800 меньше аналогичных устройств других производителей</p>
+                    </div>
+                </div>
+                <div class="benefits__item">
+                    <img src="{% static 'shop/img/feature3.png' %}" alt="Эффективный" class="benefits__icon">
+                    <div class="benefits__detail">
+                        <h3>Эффективный</h3>
+                        <p>Постоянное выходное напряжение обеспечивает чистый и стабильный вкус до последней затяжки</p>
+                    </div>
+                </div>
+            </section>
+            <section class="product">
+                <div class="product__title">
+                    <h3>Каждый вейп уникальный</h3>
+                    <h2>Выбирай на свой вкус</h2>
+                </div>
+                <div class="product__wrapper">
+                    <div class="product__items">
+                        <div class="product__item">
+                            <img src="{% static 'shop/img/reverseside-1.jpg' %}" alt="Elf bar 800 watermelon">
+                            <h4>Elf bar 800 watermelon</h4>
+                            <p>Попробуй сочный и свежий вкус летнего арбуза</p>
+                            <p class="product__price">250 грн.<span class="old-price">270 грн.</span></p>
+                            <form method="POST">
+                                <div class="product__quantity">
+                                    <button type="button">-</button>
+                                    <input type="number" min="1" max="999" step="1" value="1" size="3" maxlength="3">
+                                    <button type="button">+</button>
+                                </div>
+                                <input type="submit" class="button-buy button-buy_add-cart" value="Добавить в корзину">
+                            </form>
+                            <div class="mark">sale</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about">
+                <div class="about__item about__item_text">
+                    <h2>Elf bar 800</h2>
+                    <p>Одноразовое устройство Elf bar 800 обеспечивает яркий и насыщенный вкус благодаря специальной системе нагрева.
+                        Кроме того, аккумулятор ёмкостью 550мАч обеспечивает стабильность работы на протяжении 800 затяжек.
+                        Это позволяет получить максимальное удовольствие от использования. С Elf bar вы получите удовлетворение выгодно и качественно.</p>
+                </div>
+                <div class="about__item about__item_img">
+                    <img src="{% static 'shop/img/elfbar 800.png' %}" alt="elfbar 800">
+                </div>
+            </section>
+            <section class="shipping-payment">
+                <div class="shipping-payment__into">
+                    <h2>Доставка и оплата</h2>
+                    <div class="shipping">
+                        <div class="shipping__img">
+                            <img src="{% static 'shop/img/shipping_elfbar.png' %}" alt="shipping_elfbar">
+                        </div>
+                        <div class="shipping__text">
+                            <h3>Доставка</h3>
+                            <ul>
+                                <li>Принимаем заказы онлайн через корзину 24/7</li>
+                                <li>Минимальный заказ - 200грн</li>
+                                <li>Отправка осуществляется Новой Почтой по всей Украине по тарифам перевозчика от 35 грн</li>
+                                <li>Отправка по будним дням осуществляется в тот же день - если заказ оформлен/оплачен до 17-00</li>
+                                <li>В Субботу отправка осуществляется, если заказ оформлен/оплачен<br>до 14-00</li>
+                                <li>В Воскресенье - выходной, отправки переносятся на следующий рабочий день</li>
+                                <li>В день отправки высылается СМС сообщение с номером накладной, по которому можно отследить посылку</li>
+                                <li>Вы всегда можете связаться с нами по телефону/ Viber / Telegram<br>+38(096) 123 45 67</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="billing">
+                        <div class="billing__text">
+                            <h3>Оплата</h3>
+                            <ul>
+                                <li>Оплата при получении "Наложенный Платеж". Оплата наличными при получении наложенным платежом Новой Почтой
+                                     после получения и осмотра заказа в отделении. В отделении Новой Почты покупатель оплачивает, согласно тарифам,
+                                      доставку и наложенный платеж, который составляет 20 грн + 2% от суммы заказа</li>
+                                <li>Оплата на банковскую карту переводом. При оплате на карту вам не нужно оплачивать стоимость наложенного
+                                     платежа и вы экономите на доставке от 24 грн</li>
+                            </ul>
+                        </div>
+                        <div class="billing__img">
+                            <img src="{% static 'shop/img/billing_elfbar.png' %}" alt="billing_elfbar">
+                        </div>
+                    </div>
+                    <div class="shipping-payment__button">
+                        <a data-goto=".product" href="#" class="button-buy">Купить</a>
+                    </div>
+                </div>
+            </section>
+            <section class="contact">
+                <h2>Контакты</h2>
+                <p class="contact__item">+38(096) 123 45 67</p>
+                <p class="contact__item">ismoke7777@gmail.com</p>
+                <p class="contact__item contact__item_address">ул. Урожайная 1А</p>
+                <p class="contact__item contact__item_address">г. Кривой Рог</p>
+            </section>
+            <a href="#" class="cart">
+                    <img src="{% static 'shop/img/shopping_cart.png' %}" alt="shopping_cart">
+                    <div class="cart__qty">
+                        <span>5&nbsp;шт.</span>
+                        <span>1250&nbsp;грн.</span>
+                    </div>
+            </a>
+            <footer class="footer">
+                <div class="footer__into">
+                    <p>&#169; ismoke 2021</p>
+                    <p>Продукт содержит никотин. Никотин вызывает привыкание.</p>
+                </div>
+            </footer>
+         </div>
+{% endblock %}
